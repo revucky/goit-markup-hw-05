@@ -47,7 +47,7 @@
       <!-- шапка -->
       <section class="section-hero">
         <h1 class="title-studio">Эффективные решения для вашего бизнеса</h1>
-        <button type="button" class="button">Заказать услугу</button>
+        <button data-modal-open type="button" class="button" data-modal-open>Заказать услугу</button>
       </section>
       <!-- особенности -->
       <section class="section features">
@@ -115,21 +115,25 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="work-list">
             <li class="work-item">
-              <img src="./images/box1.jpg" alt="друкуємо" width="370" />
+              <div class="work-thumb">
+                <img src="./images/box1.jpg" alt="друкуємо" width="370" />
+              <p class="work-text">Десктопные приложения</p></div>
             </li>
             <li class="work-item">
+              <div class="work-thumb">
               <img
                 src="./images/box2.jpg"
                 alt="керуємо з телефону"
-                width="370"
-              />
+                width="370"/>
+                <p class="work-text">Мобильные приложения</p></div>
             </li>
             <li class="work-item">
+              <div class="work-thumb">
               <img
                 src="./images/box3.jpg"
                 alt="або керуємо з планшету"
-                width="370"
-              />
+                width="370"/>
+                <p class="work-text">Дизайнерские решения</p></div>
             </li>
           </ul>
         </div>
@@ -402,5 +406,15 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-icon" width="18" height="18">
+            <use href="./images/sprite.svg#icon-btnclose"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
